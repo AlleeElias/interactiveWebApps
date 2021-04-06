@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <title>Javascript and the web: een button</title>
+</head>
+<body>
+<div class="container">
+        <h1>Javascript and the web: een button</h1>
+        <div id="count" class="alert alert-primary"></div>
+        <button class="btn btn-outline-primary" type="button" onclick="count()">Count</button>
+
+</div>
+<script>
+    let counter = 0;
+
+    function count() {
+        counter++;
+        const countEl = document.getElementById("count");
+        console.log(`counter=${counter}`);
+        countEl.innerHTML = `counter is ${counter}`;
+    }
+</script>
+</body>
+</html>
