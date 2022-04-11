@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <title>Introduction</title>
+    <style>
+        .container + .container {
+            margin-top: 200px;
+        }
+    </style>
+</head>
+<body>
+
+<script type="text/javascript">
+    console.log("Dadelijk in html of met verwijzing naar JavaScript bestand");
+</script>
+
+<script src="js/00.intro.js"></script>
+
+<div class="container">
+    <h4>introduction</h4>
+    <ul class="list-group">
+        <li class="list-group-item">open index.html in de browser.</li>
+        <li class="list-group-item">open de browser dev tools.</li>
+        <li class="list-group-item">kijk in de console en in de Sources tab.</li>
+    </ul>
+</div>
+
+<div class="container">
+    <p>De som van a en b = <span id="a+b"></span></p>
+</div>
+
+<script type="text/javascript">
+    document.getElementById("a+b").innerHTML = a + b;
+</script>
+
+</body>
+</html>
