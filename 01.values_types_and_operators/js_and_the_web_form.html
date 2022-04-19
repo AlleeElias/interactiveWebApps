@@ -15,6 +15,7 @@
                 <span class="input-group-text">Person</span>
             </div>
             <input type="text" id="firstName" class="form-control" placeholder="First Name">
+            <input type="text" id=lastName" class="form-control" placeholder="Last Name">
         </div>
         <div class="input-group mb-3">
             <div class="input-group-prepend">
@@ -27,8 +28,9 @@
 <script>
     function sayHello() {
         const firstNameEl = document.getElementById("firstName");
+        const lastNameEl = document.getElementById("lastName");
         const helloEl = document.getElementById("hello");
-        const helloMessage = `Hello ${firstNameEl.value}!`;
+        const helloMessage = `Hello ${firstNameEl.value} ${lastNameEl.value}!`;
         console.log(helloMessage);
         helloEl.innerHTML = helloMessage;
     }

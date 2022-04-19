@@ -10,12 +10,18 @@
 <div class="container">
     <h1>Javascript and the web</h1>
     <div id="hello" class="alert alert-primary"></div>
+    <div id="som" class="alert alert-primary"></div>
 </div>
 <script>
         const helloEl = document.getElementById("hello");
         const helloMessage = `Hello allemaal!`;
         console.log(helloMessage);
         helloEl.innerHTML = helloMessage;
+
+        const somEl=document.getElementById("som");
+        const getal1=50;
+        const getal2=60;
+        somEl.innerHTML="som = "+ (getal1+getal2);
 </script>
 </body>
 </html>
