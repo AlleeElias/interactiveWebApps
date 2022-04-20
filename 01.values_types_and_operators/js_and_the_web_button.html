@@ -10,25 +10,32 @@
 <div class="container">
     <h1>Javascript and the web: een button</h1>
     <div id="count" class="alert alert-primary"></div>
-    <button class="btn btn-outline-primary" type="button" onclick="count()">Count</button>
-    <button class="btn btn-outline-primary" type="button" onclick="decrease()">Decrease</button>
+    <div>
+        <div class="line">
+            <p>counter 1</p>
+            <button class="btn btn-outline-primary" type="button" onclick="count(1, '+')">+</button>
+            <button class="btn btn-outline-primary" type="button" onclick="count(1, '-')">-</button>
+        </div>
+        <div class="line">
+            <p>counter 2</p>
+            <button class="btn btn-outline-primary" type="button" onclick="count(2, '+')">+</button>
+            <button class="btn btn-outline-primary" type="button" onclick="count(2, '-')">-</button>
+        </div>
+    </div>
 
 </div>
 <script>
-    let counter = 0;
+    let counter1 = 0;
+    let counter2 = 0;
 
-    function count() {
-        counter++;
+    function count(counter, operator) {
+        if (operator=="+") {
+            counter==1 ? counter1++ : counter2++;
+        } else {
+            counter==1 ? counter1-- : counter2--;
+        }
         const countEl = document.getElementById("count");
-        console.log(`counter=${counter}`);
-        countEl.innerHTML = `counter is ${counter}`;
-    }
-
-    function decrease(){
-        counter--;
-        const countEl=document.getElementById("count");
-        console.log(`counter=${counter}`);
-        countEl.innerHTML=`counter is ${counter}`;
+        countEl.innerHTML = `counter 1 is ${counter1} en counter 2 is ${counter2}`;
     }
 </script>
 </body>
