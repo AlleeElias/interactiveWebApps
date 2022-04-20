@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <title>Oefening 2</title>
+</head>
+<body>
+<div class="container">
+    <h1>Hoofdstuk 2: Oefening 2</h1>
+    <form>
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+                <span class="input-group-text">Boete</span>
+            </div>
+            <input type="text" id="allowedSpeed" class="form-control" placeholder="toegelaten snelheid">
+            <input type="text" id="measureSpeed" class="form-control" placeholder="gereden snelheid">
+        </div>
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+                <button class="btn btn-outline-primary" type="button" onclick="calculatePenalty()">order</button>
+            </div>
+        </div>
+    </form>
+    <div id="result" class="alert alert-primary"></div>
+</div>
+<script>
+    function calculatePenalty() {
+        // Vergelijk de gemeten snelheid met de maximum toegelaten snelheid.
+        // Als je niet te snel rijdt, dan is er geen probleem.
+        // Als je te snel rijdt, dan berekent het programma je boete.
+        // De boete is een vast bedrag van € 100 + € 2,5 per km die je te snel reed.
+        // Toon de boete in de div met id "result"
+    }
+</script>
+</body>
+</html>
